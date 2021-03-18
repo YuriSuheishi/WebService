@@ -2,7 +2,32 @@ import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
 
+
+
+function ButtonAdd(props){
+  async function Backend(pokeID, pokeName){
+    try {
+    const url = `http://localhost:3333/poke`;
+    console.log(pokeName + pokeID);
+    const res = await axios.post(url, {
+      name: pokeName,
+      id: pokeID,
+    });
+    console.log(res.status);
+    } catch (e) {
+      console.log(e);
+    }
+    return
+  };
+
+  return(
+    <div className="field"><button onClick={() => Backend(props.id, props.name)}>Adicionar</button></div>
+  );
+};
+
+
 const App = () => {
+
   const [pokemon, setPokemon] = useState("pikachu");
   const [pokemonData, setPokemonData] = useState([]);
   const [pokemonType, setPokemonType] = useState("");
@@ -47,9 +72,7 @@ const App = () => {
     }
   };
   
-  onClick={status(data.id)}
-  */
-
+  onClick={status(data.id)}*/
 
   const Submit = (e) => {
     e.preventDefault();
@@ -63,7 +86,7 @@ const App = () => {
       const res = await axios.get(url);  
       toArray.push(res.data);
       setPokemonType(res.data.types[0].type.name);
-      setPokemonData(toArray);   
+      setPokemonData(toArray);    
       getStatus(res.data.id);
     } catch (e) {
       console.log(e);
@@ -111,7 +134,8 @@ const App = () => {
                     {" "}
                     {(data.weight / 10)} Kg
                   </div>
-                  <div className="field"><button>Adicionar</button></div>
+                  <ButtonAdd name={data.name} id={data.id} />
+
                   </div>
             </div>
         );
