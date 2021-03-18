@@ -7,7 +7,7 @@ e você pode adicionar ele, em cima do pokemon tem o status atual.
 <h1>Frontend </h1>
 O frontend inclui um campo para pesquisa, exibe os dados da pesquisa, e inclui um 
 botão para adicionar o pokemon a tabela.
-<img src="img/tela.png" width="200px">
+<img src="img/tela.png" width="600px">
 
 <h1>Backend </h1>
 Usando Node, Express, e TypeORM, para criar a tabela, e usando SQLite para simulação do backend, 
@@ -47,3 +47,4 @@ O insomnia envia respostas diferentes com a mesma requisição do sistema,
 estou tentando consertar esse bug atualmente. além disso faltam os teste.
 Estou com algumas outras tarefas atrasadas, então estou momentaneamente 
 deixando essa de lado.
+<br><br>
