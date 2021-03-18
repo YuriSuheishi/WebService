@@ -10,21 +10,21 @@ e você pode adicionar ele, em cima do pokemon tem o status atual.
 <h1>Backend </h1>
 Criei duas rotas: <br>
 <strong>GET http://localhost:3333/poke </strong>
-...
+
     Request:{
 	    "id": "3"
     }  
     Response: Status do pokemon(Já Obtido ou Não Obtido)
-...
+
 <br>
 <strong> POST http://localhost:3333/poke </strong>
-...
+
     Request: {                  
         "name": "venossauro",   
         "id": "3"
     }
     Response:  Cria o registro no BD, ou retorna um error
-...
+
 
 <h1>Execução</h1>
 Caso todas as dependecias estejam devidamente instaladas, basta rodar o comando: <br>
