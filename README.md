@@ -1,1 +1,1 @@
-<h1>Pokedex</h1>
+Grupo Yuri PSS da Silva e Pedro Henrique Borges
