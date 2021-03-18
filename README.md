@@ -5,14 +5,17 @@ O projeto acessa a PokeAPI, para encontrar o pokemon pesquisado, <br>
 e você pode adicionar ele, em cima do pokemon tem o status atual.
 
 <h1>Frontend </h1>
-
+O frontend inclui um campo para pesquisa, exibe os dados da pesquisa, e inclui um 
+botão para adicionar o pokemon a tabela.
+<img src="img/tela.png" width="200px">
 
 <h1>Backend </h1>
-Criei duas rotas: <br>
+Usando Node, Express, e TypeORM, para criar a tabela, e usando SQLite para simulação do backend, 
+para esse trabalho criei duas rotas: <br>
 <strong>GET http://localhost:3333/poke </strong>
 
     Request:{
-	    "id": "3"
+	    "id": ID Pokemon
     }  
     Response: Status do pokemon(Já Obtido ou Não Obtido)
 
@@ -20,10 +23,10 @@ Criei duas rotas: <br>
 <strong> POST http://localhost:3333/poke </strong>
 
     Request: {                  
-        "name": "venossauro",   
-        "id": "3"
+        "name": Nome Pokemon,   
+        "id": ID Pokemon
     }
-    Response:  Cria o registro no BD, ou retorna um error
+    Response:  Cria o registro no BD, ou retorna um erro "Pokemon already exists"
 
 
 <h1>Execução</h1>
